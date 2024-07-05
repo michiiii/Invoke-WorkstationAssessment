@@ -1752,9 +1752,9 @@ if((Test-RegistryValue -Path $regPath -Name $regPathProperty)){
          }
      }
  } else {
-    $strAuditCheckResult='LLMNR is disabled'
-    Write-Host $strAuditCheckResult -ForegroundColor Green
-    Add-SecurityCheckItem -SecurityItem $strSecurityItem -SecurityItemCheck $strSecurityItemCheck -AuditCheckResult $strAuditCheckResult -AuditCheckPass $true
+    $strAuditCheckResult='LLMNR is enabled'
+    Write-Host $strAuditCheckResult -ForegroundColor Red
+    Add-SecurityCheckItem -SecurityItem $strSecurityItem -SecurityItemCheck $strSecurityItemCheck -AuditCheckResult $strAuditCheckResult -AuditCheckPass $false
  }
 
 
